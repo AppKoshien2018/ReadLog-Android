@@ -25,6 +25,10 @@ public class OpActivity extends AppCompatActivity {
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // もしログインしているなら、MainActivityに移動する。
+
+                // そうでないなら、SignActivityに移動する。
                 Intent intent = new Intent(OpActivity.this,SignActivity.class);
                 startActivity(intent);
             }
