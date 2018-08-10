@@ -8,7 +8,7 @@
     tools:context=".SignUpActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signUpButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -19,7 +19,7 @@
         android:text="SIGN UP" />
 
     <EditText
-        android:id="@+id/mailText2"
+        android:id="@+id/mailText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -29,7 +29,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/passwordText2"
+        android:id="@+id/passwordText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -47,7 +47,7 @@
         app:lottie_loop="true" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
