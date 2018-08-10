@@ -18,11 +18,13 @@ public class SignActivity extends AppCompatActivity {
 
 
     public void signin(View v){
-
+    Intent intent = new Intent(this,SignInActivity.class);
+    startActivity(intent);
     }
 
 
     public void signup(View v){
-
+        Intent intent = new Intent(this,SignUpActivity.class);
+        startActivity(intent);
     }
 }
