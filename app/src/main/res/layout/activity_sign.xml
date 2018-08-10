@@ -23,6 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
         android:background="@android:color/white"
+        android:onClick="signup"
         android:text="SIGN UP" />
 
     <Button
@@ -33,7 +34,20 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="120dp"
         android:background="@android:color/white"
+        android:onClick="signin"
         android:text="SIGN IN" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Read Log"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
 
 
 </RelativeLayout>
