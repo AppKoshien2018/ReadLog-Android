@@ -25,7 +25,8 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        tools:ignore="MissingPrefix" />
 
 
 </RelativeLayout>

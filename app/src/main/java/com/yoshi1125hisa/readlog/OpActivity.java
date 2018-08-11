@@ -1,17 +1,25 @@
 package com.yoshi1125hisa.readlog;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class OpActivity extends AppCompatActivity {
-    RelativeLayout relativeLayout;
+
+
 //    private boolean clickedFav = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +28,13 @@ public class OpActivity extends AppCompatActivity {
             //ページ遷移のアニメーション。
         setContentView(R.layout.activity_op);
 
-        relativeLayout = findViewById(R.id.relativeLayout);
+        TextView titleText;
+        titleText = findViewById(R.id.titleText);
+        titleText.setTypeface(Typeface.createFromAsset(getAssets(),
+                "skia.ttf"));
 
+        RelativeLayout relativeLayout;
+        relativeLayout = findViewById(R.id.relativeLayout);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,4 +63,5 @@ public class OpActivity extends AppCompatActivity {
 //            }
 //        });
     }
+
 }

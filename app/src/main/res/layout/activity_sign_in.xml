@@ -22,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:background="@android:color/white"
+        android:background="@drawable/shape_rounded_corners_5dp"
         android:onClick="signin"
         android:text="SIGN IN" />
 
@@ -45,6 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="180dp"
         android:ems="10"
+        android:hint="メールアドレス"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -55,6 +56,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="120dp"
         android:ems="10"
+        android:hint="パスワード"
         android:inputType="textPassword" />
 
 

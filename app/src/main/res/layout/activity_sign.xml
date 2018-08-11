@@ -22,8 +22,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
-        android:background="@android:color/white"
+        android:background="@drawable/shape_rounded_corners_5dp"
         android:onClick="signup"
+
         android:text="SIGN UP" />
 
     <Button
@@ -33,7 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="120dp"
-        android:background="@android:color/white"
+        android:background="@drawable/shape_rounded_corners_5dp"
         android:onClick="signin"
         android:text="SIGN IN" />
 

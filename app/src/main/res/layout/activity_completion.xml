@@ -14,15 +14,17 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="done.json"
+        android:layout_marginTop="10dp"
+        app:lottie_fileName="check_animation.json"
         app:lottie_loop="false" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/doneText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/animation_view"
+        android:layout_above="@+id/animation_view"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-10dp"
         android:text="登録が完了しました！"
         android:textAlignment="center"
         android:textColor="@android:color/white"

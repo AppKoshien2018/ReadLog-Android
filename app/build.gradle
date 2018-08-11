@@ -28,4 +28,7 @@ dependencies {
 
     //Lottie
     implementation 'com.airbnb.android:lottie:1.5.3'
+
+    //Font
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 }
