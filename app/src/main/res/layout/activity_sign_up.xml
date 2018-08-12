@@ -16,7 +16,7 @@
         android:layout_marginBottom="60dp"
         android:background="@drawable/shape_rounded_corners_5dp"
         android:onClick="signup"
-        android:text="SIGN UP" />
+        android:text="会員登録" />
 
     <EditText
         android:id="@+id/mailText"

@@ -33,4 +33,15 @@ dependencies {
     //Font
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 
+    //Fire base
+    apply plugin: 'com.google.gms.google-services'
+
+    //Fire base認証
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
+
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+
 }
+//Fire base
+apply plugin: 'com.google.gms.google-services'

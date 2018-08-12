@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".SignInActivity">
+    tools:context=".SignOutActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
@@ -16,15 +16,27 @@
         app:lottie_loop="true" />
 
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/signOutButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/shape_rounded_corners_5dp"
-        android:onClick="signin"
-        android:text="ログイン" />
+        android:onClick="signout"
+        android:text="ログアウト" />
+
+    <TextView
+        android:id="@+id/signOutText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="140dp"
+        android:text="ログアウトしますか？"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/titleText"
@@ -35,33 +47,8 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:ems="10"
-
-
         android:textSize="36sp" />
 
-    <EditText
-        android:id="@+id/mailText"
-
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="180dp"
-        android:ems="10"
-        android:hint="メールアドレス"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/passwordText"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="120dp"
-        android:ems="10"
-        android:hint="パスワード"
-        android:inputType="textPassword" />
 
 
 </RelativeLayout>
