@@ -35,10 +35,14 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
+        android:ems="10"
+
+
         android:textSize="36sp" />
 
     <EditText
         android:id="@+id/mailText"
+
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

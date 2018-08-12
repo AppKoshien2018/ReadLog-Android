@@ -19,8 +19,10 @@
         <activity android:name=".SignActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".CompletionActivity"></activity>
+        <activity android:name=".CompletionActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"></activity>
     </application>
 
 </manifest>

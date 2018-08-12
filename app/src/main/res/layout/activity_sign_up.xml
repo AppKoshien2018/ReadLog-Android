@@ -27,6 +27,7 @@
         android:layout_marginBottom="180dp"
         android:ems="10"
         android:hint="メールアドレス"
+
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -38,6 +39,7 @@
         android:layout_marginBottom="120dp"
         android:ems="10"
         android:hint="パスワード"
+
         android:inputType="textPassword" />
 
     <com.airbnb.lottie.LottieAnimationView
