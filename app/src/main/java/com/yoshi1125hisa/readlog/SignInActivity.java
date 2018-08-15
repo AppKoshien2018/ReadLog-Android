@@ -62,21 +62,21 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private void createAccount(String email, String password) {
-        if (!validateForm()) {
-            return;
-        } mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            changeActivity();
-                        } else {
-                            Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }
+//    private void createAccount(String email, String password) {
+//        if (!validateForm()) {
+//            return;
+//        } mAuth.createUserWithEmailAndPassword(email, password)
+//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            changeActivity();
+//                        } else {
+//                            Toast.makeText(SignInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//    }
 
     private void signIn(String email, String password) {
         if (!validateForm()) {
@@ -120,6 +120,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void changeActivity() {
         Intent intent = new Intent(SignInActivity.this, CompletionActivity.class);
+
         startActivity(intent);
     }
 }

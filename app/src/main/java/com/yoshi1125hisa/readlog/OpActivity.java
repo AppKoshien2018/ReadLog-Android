@@ -33,8 +33,7 @@ public class OpActivity extends AppCompatActivity {
         titleText.setTypeface(Typeface.createFromAsset(getAssets(),
                 "skia.ttf"));
 
-        RelativeLayout relativeLayout;
-        relativeLayout = findViewById(R.id.relativeLayout);
+        RelativeLayout relativeLayout = findViewById(R.id.relativeLayout);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

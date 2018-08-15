@@ -31,11 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:ems="10"
         android:text="Read Log"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:ems="10"
 
 
         android:textSize="36sp" />
@@ -50,7 +50,8 @@
         android:layout_marginBottom="180dp"
         android:ems="10"
         android:hint="メールアドレス"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/passwordText"
@@ -61,7 +62,8 @@
         android:layout_marginBottom="120dp"
         android:ems="10"
         android:hint="パスワード"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@android:color/white" />
 
 
 </RelativeLayout>

@@ -25,7 +25,7 @@
         android:layout_above="@+id/animation_view"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-10dp"
-        android:text="登録が完了しました！"
+        android:text="ログインが完了しました！"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"

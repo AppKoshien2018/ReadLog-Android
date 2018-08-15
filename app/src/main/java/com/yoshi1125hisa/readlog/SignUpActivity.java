@@ -57,10 +57,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         mAuth = FirebaseAuth.getInstance();
     }
 
-    public void signup(View v){
-        Intent intent = new Intent(this,CompletionActivity.class);
-        startActivity(intent);
-    }
 
     @Override
     public void onClick(View view) {

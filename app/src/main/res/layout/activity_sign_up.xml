@@ -28,7 +28,8 @@
         android:ems="10"
         android:hint="メールアドレス"
 
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/passwordText"
@@ -40,7 +41,8 @@
         android:ems="10"
         android:hint="パスワード"
 
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@android:color/white" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"

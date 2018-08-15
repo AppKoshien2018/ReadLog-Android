@@ -37,7 +37,7 @@ public class SignOutActivity extends AppCompatActivity {
                 mAuth.signOut();
                 Intent intent = new Intent(SignOutActivity.this, OpActivity.class);
                 startActivity(intent);
-                finish();
+                finish(); // ?
             }
         });
     }
