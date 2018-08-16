@@ -1,9 +1,12 @@
 package com.yoshi1125hisa.readlog;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Explode;
+import android.util.Pair;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -16,6 +19,7 @@ public class SignActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        getWindow().setExitTransition(new Explode());
         //ページ遷移のアニメーション。
         setContentView(R.layout.activity_sign);
 
@@ -38,13 +42,22 @@ public class SignActivity extends AppCompatActivity {
 
 
     public void signin(View v){
-    Intent intent = new Intent(this,SignInActivity.class);
-    startActivity(intent);
+    goSignIn();
     }
 
-
     public void signup(View v){
-        Intent intent = new Intent(this,SignUpActivity.class);
-        startActivity(intent);
+        goSignUp();
+    }
+
+    private void goSignIn() {
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+    }
+
+    private void goSignUp() {
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent,
+                ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
     }
 }

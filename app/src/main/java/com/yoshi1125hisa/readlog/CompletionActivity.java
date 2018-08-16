@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -21,6 +22,7 @@ public class CompletionActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        getWindow().setExitTransition(new Explode());
         //ページ遷移のアニメーション。
         setContentView(R.layout.activity_completion);
 
