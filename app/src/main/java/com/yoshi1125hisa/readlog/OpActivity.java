@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.Window;
@@ -14,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -66,9 +69,23 @@ public class OpActivity extends AppCompatActivity {
     }
 
     private void gotoSign() {
-        Intent intent = new Intent(this, SignActivity.class);
-        startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // サインインしている状態
+            Intent intent = new Intent(OpActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+        } else {
+            // サインインしていない状態
+            Log.d("TAG", "onAuthStateChanged:signed_out");
+            Intent intent = new Intent(this, SignActivity.class);
+            startActivity(intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+        }
+
+
+
     }
 
 }

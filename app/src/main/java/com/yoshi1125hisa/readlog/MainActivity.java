@@ -48,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
         OriginalFragmentPagerAdapter adapter = new OriginalFragmentPagerAdapter(getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.viewPager);
-        viewPager.setOffscreenPageLimit(2);
+
+        //ページのキャッシュの読み込み数（Fragment数）
+        viewPager.setOffscreenPageLimit(3);
+
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
