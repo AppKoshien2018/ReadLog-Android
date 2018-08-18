@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!--ボタン通常時のレイアウト-->
-    <item state_pressed="false">
+    <item android:state_pressed="false">
         <shape android:shape="rectangle">
             <corners
                 android:topRightRadius="5dp"
@@ -15,7 +15,7 @@
         </shape>
     </item>
     <!--ボタン押下時のレイアウト-->
-    <item state_pressed="true">
+    <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <corners
                 android:topRightRadius="5dp"

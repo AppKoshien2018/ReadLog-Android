@@ -78,7 +78,7 @@ public class OpActivity extends AppCompatActivity {
                     ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
         } else {
             // サインインしていない状態
-            Log.d("TAG", "onAuthStateChanged:signed_out");
+            //Log.d("TAG", "onAuthStateChanged:signed_out");
             Intent intent = new Intent(this, SignActivity.class);
             startActivity(intent,
                     ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
