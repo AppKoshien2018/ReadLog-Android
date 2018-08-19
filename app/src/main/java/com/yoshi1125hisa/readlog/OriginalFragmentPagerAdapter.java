@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 public class OriginalFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private CharSequence[] tabTitles = {"Tab1", "Tab2","Tab3"};
+    private CharSequence[] tabTitles = {"Tab1", "Tab2","Profile"};
 
     public OriginalFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -25,7 +25,7 @@ public class OriginalFragmentPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return new Main2Fragment();
             case 2:
-                return new Main3Fragment();
+                return new ProfileFragment();
             default:
                 return null;
         }
