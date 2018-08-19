@@ -38,9 +38,12 @@ dependencies {
 
     //Fire base認証
     implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-auth:16.0.2'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
 
-    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+
+    // Font awesome
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
 
 }
 //Fire base
