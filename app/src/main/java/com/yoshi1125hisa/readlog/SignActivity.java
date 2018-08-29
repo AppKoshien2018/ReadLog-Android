@@ -40,9 +40,8 @@ public class SignActivity extends AppCompatActivity {
 
     }
 
-
     public void signin(View v){
-    goSignIn();
+        goSignIn();
     }
 
     public void signup(View v){

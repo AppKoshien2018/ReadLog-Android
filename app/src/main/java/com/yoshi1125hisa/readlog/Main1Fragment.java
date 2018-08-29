@@ -1,11 +1,15 @@
 package com.yoshi1125hisa.readlog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.yoshi1125hisa.readlog.google.BarcodeCaptureActivity;
 
 public class Main1Fragment extends Fragment {
 
@@ -21,5 +25,8 @@ public class Main1Fragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
     }
+
 }

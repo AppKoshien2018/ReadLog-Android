@@ -46,6 +46,9 @@ public class OpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 gotoSign();
 
+                Intent intent = new Intent(OpActivity.this,SignActivity.class);
+                startActivity(intent);
+
             }
         });
 
@@ -67,7 +70,7 @@ public class OpActivity extends AppCompatActivity {
 //            }
 //        });
     }
-
+//    ログインしているか、していないかの確認
     private void gotoSign() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {

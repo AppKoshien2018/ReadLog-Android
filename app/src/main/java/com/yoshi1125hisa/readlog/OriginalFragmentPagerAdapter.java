@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 public class OriginalFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private CharSequence[] tabTitles = {"Tab1", "Tab2","Profile"};
+    private CharSequence[] tabTitles = {"Camera", "Books","Profile"};
 
     public OriginalFragmentPagerAdapter(FragmentManager fm) {
         super(fm);

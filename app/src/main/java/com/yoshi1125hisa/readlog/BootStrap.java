@@ -1,4 +1,5 @@
 package com.yoshi1125hisa.readlog;
+
 /*
 The MIT License (MIT)Copyright (c) 2013-2015 Bearded Hen
 
@@ -24,7 +25,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</td>
 import android.app.Application;
 import com.beardedhen.androidbootstrap.TypefaceProvider;
 
-// Applicationを継承
 public class BootStrap extends Application {
     @Override public void onCreate() {
         super.onCreate();
