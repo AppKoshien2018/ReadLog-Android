@@ -47,9 +47,14 @@ dependencies {
 
     // ZXing
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.google.zxing:core:3.3.2'
 
     // Buttter knife
     implementation 'com.jakewharton:butterknife:8.8.1'
+
+    // Runtime permission
+    implementation 'net.taptappun.taku.kobayashi:runtimepermissionchecker:1.1.1'
+
 
 
 }

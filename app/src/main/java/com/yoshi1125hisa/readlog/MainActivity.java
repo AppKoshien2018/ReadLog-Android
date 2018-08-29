@@ -1,5 +1,6 @@
 package com.yoshi1125hisa.readlog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,13 +9,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 //    private TextView mTextMessage;
-
 //    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
 //            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 //
@@ -51,15 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
         //ページのキャッシュの読み込み数（Fragment数）
         viewPager.setOffscreenPageLimit(3);
-
         viewPager.setAdapter(adapter);
-
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
 //        mTextMessage = findViewById(R.id.message);
 //        BottomNavigationView navigation = findViewById(R.id.navigation);
 //        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void barcode(View v){
+        Intent intent = new Intent(this,ReadBarcodeActivity.class);
+        startActivity(intent);
     }
 
 }

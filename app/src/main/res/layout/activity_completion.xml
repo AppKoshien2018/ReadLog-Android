@@ -28,7 +28,7 @@
         android:text="ログインが完了しました！"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
 

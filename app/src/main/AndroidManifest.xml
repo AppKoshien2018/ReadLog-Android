@@ -3,7 +3,6 @@
     package="com.yoshi1125hisa.readlog">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
 
@@ -13,7 +12,6 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon_round_250"
         android:supportsRtl="true"
-        android:name=".BootStrap"
         android:hardwareAccelerated="true"
         android:theme="@style/move_anim">
         <meta-data
@@ -25,11 +23,11 @@
         <activity android:name=".OpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".SignActivity" />
+        <activity android:name=".ReadBarcodeActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".CompletionActivity" />
@@ -37,7 +35,6 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" />
         <activity android:name=".SignOutActivity"/>
-        <activity android:name=".google.BarcodeCaptureActivity"/>
     </application>
 
 </manifest>

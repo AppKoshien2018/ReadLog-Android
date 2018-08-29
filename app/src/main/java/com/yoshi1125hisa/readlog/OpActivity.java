@@ -18,7 +18,11 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import net.taptappun.taku.kobayashi.runtimepermissionchecker.RuntimePermissionChecker;
+
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static com.google.zxing.integration.android.IntentIntegrator.REQUEST_CODE;
 
 public class OpActivity extends AppCompatActivity {
 
@@ -32,8 +36,11 @@ public class OpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().setExitTransition(new Explode());
+
         //ページ遷移のアニメーション。
         setContentView(R.layout.activity_op);
+
+        RuntimePermissionChecker.requestAllPermissions(this, REQUEST_CODE);
 
         TextView titleText;
         titleText = findViewById(R.id.titleText);

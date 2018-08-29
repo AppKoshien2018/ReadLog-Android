@@ -1,55 +1,56 @@
 package com.yoshi1125hisa.readlog;
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+import android.util.AndroidRuntimeException;
+import android.widget.ImageView;
 
-import com.google.android.gms.common.api.CommonStatusCodes;
-import com.google.android.gms.vision.barcode.Barcode;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
-import net.buildbox.sample.sample_googlebarcodereader.google.BarcodeCaptureActivity;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import com.google.zxing.ResultPoint;
+import com.journeyapps.barcodescanner.BarcodeCallback;
+import com.journeyapps.barcodescanner.BarcodeResult;
+import com.journeyapps.barcodescanner.CompoundBarcodeView;
+
+import java.util.List;
 
 public class ReadBarcodeActivity extends AppCompatActivity {
 
-    private static final int BARCODE_CAPTURE_REQUEST = 0x0001;
-
+    private CompoundBarcodeView mBarcodeView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_barcode);
-        ButterKnife.bind(this);
-    }
 
-    @OnClick(R.id.barcodeScanButton)
-    public void onBarcodeScanClick() {
-        Intent intent = new Intent(this, BarcodeCaptureActivity.class);
-        intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
-        intent.putExtra(BarcodeCaptureActivity.UseFlash, true);
+        mBarcodeView = (CompoundBarcodeView)findViewById(R.id.barcodeView);
+        mBarcodeView.decodeSingle(new BarcodeCallback() {
+            @Override
+            public void barcodeResult(BarcodeResult barcodeResult) {
 
-        startActivityForResult(intent, BARCODE_CAPTURE_REQUEST);
+                TextView textView = (TextView)findViewById(R.id.textView);
+                textView.setText(barcodeResult.getText());
+            }
+
+            @Override
+            public void possibleResultPoints(List<ResultPoint> list) {}
+        });
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == BARCODE_CAPTURE_REQUEST) {
-            if (resultCode == CommonStatusCodes.SUCCESS) {
-                if (data != null) {
-                    Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
-                    Toast.makeText(this, barcode.displayValue, Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(this, "バーコードがキャプチャ出来ませんでした", Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                Toast.makeText(this, "バーコードの読み込みに失敗しました", Toast.LENGTH_SHORT).show();
-            }
-        }
-        else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
+    public void onResume() {
+        super.onResume();
+        mBarcodeView.resume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mBarcodeView.pause();
     }
 }

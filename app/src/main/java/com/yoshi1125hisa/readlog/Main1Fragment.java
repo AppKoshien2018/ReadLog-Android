@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.yoshi1125hisa.readlog.google.BarcodeCaptureActivity;
-
 public class Main1Fragment extends Fragment {
 
     public Main1Fragment() {
