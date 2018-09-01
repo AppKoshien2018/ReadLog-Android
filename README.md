@@ -9,3 +9,6 @@ This is an Android application that allows you to share the book you read.
 ### Fragment, TabLayoutなど
 - https://qiita.com/PiyoMoasa/items/a0282483831b5993da02
 - https://qiita.com/PiyoMoasa/items/9ddd7b9e4814da6ca72f
+
+### Runtime Permission
+- https://qiita.com/taptappun/items/7fae4317d751245b2089

@@ -26,17 +26,11 @@ import static com.google.zxing.integration.android.IntentIntegrator.REQUEST_CODE
 
 public class OpActivity extends AppCompatActivity {
 
-
-//    private boolean clickedFav = false;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().setExitTransition(new Explode());
-
         //ページ遷移のアニメーション。
         setContentView(R.layout.activity_op);
 
@@ -52,33 +46,15 @@ public class OpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gotoSign();
-
                 Intent intent = new Intent(OpActivity.this,SignActivity.class);
                 startActivity(intent);
 
             }
         });
 
-
-
-
-//        final LottieAnimationView animationView = findViewById(R.id.animation_view);
-//        animationView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(clickedFav) {
-//                    // setProgress(0f)でアニメーション開始前状態にします。
-//                    animationView.setProgress(0f);
-//                    clickedFav = false;
-//                } else {
-//                    animationView.playAnimation();
-//                    clickedFav = true;
-//                }
-//            }
-//        });
     }
-//    ログインしているか、していないかの確認
-    private void gotoSign() {
+    //    ログインしているか、していないかの確認
+    public void gotoSign() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // サインインしている状態
