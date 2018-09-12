@@ -46,8 +46,8 @@ public class OpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gotoSign();
-                Intent intent = new Intent(OpActivity.this,SignActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(OpActivity.this,SignActivity.class);
+//                startActivity(intent);
 
             }
         });
@@ -60,14 +60,16 @@ public class OpActivity extends AppCompatActivity {
             // サインインしている状態
             Intent intent = new Intent(OpActivity.this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent,
-                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+//            startActivity(intent,
+//                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+            startActivity(intent);
         } else {
             // サインインしていない状態
             //Log.d("TAG", "onAuthStateChanged:signed_out");
             Intent intent = new Intent(this, SignActivity.class);
-            startActivity(intent,
-                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+//            startActivity(intent,
+//                    ActivityOptions.makeSceneTransitionAnimation(this, (Pair<View, String>[]) null).toBundle());
+            startActivity(intent);
         }
 
 

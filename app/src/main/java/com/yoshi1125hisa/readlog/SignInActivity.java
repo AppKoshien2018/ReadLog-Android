@@ -27,9 +27,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-        getWindow().setExitTransition(new Explode());
-        //ページ遷移のアニメーション。
         setContentView(R.layout.activity_sign_in);
 
         TextView titleText;
@@ -122,7 +119,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     private void changeActivity() {
         Intent intent = new Intent(SignInActivity.this, CompletionActivity.class);
-
         startActivity(intent);
     }
 }

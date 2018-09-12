@@ -21,9 +21,6 @@ public class CompletionActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-        getWindow().setExitTransition(new Explode());
-        //ページ遷移のアニメーション。
         setContentView(R.layout.activity_completion);
 
 
